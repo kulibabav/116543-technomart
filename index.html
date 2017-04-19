@@ -12,8 +12,8 @@
           <h1>Техномарт</h1> <!--"Техномарт" это главный заголовок-->
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
-          <input id="header-search-field" type="text" name="q" placeholder="Поиск">
-          <input id="header-search-button" type="submit">
+          <input type="text" name="q" placeholder="Поиск">
+          <input type="submit">
         </form>
         <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
         <a class="header-bin" href="#">Корзина: <span class="bin-count">0</span></a>
@@ -290,5 +290,25 @@
         </div>
       </div>
     </footer>
+    <div id="write-us" class="pop-up hidden"> <!--Форма обратной связи-->
+      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
+      <form class="post-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="post-form-left"> <!--Половина ширины слева-->
+          <label for="name-field">Ваше имя:</label>
+          <input id="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="post-form-right"> <!--Половина ширины справа-->
+          <label for="email-field">Ваш e-mail:</label>
+          <input id="email-field" type="email" name="email" placeholder="Для отправки ответа">
+        </div>
+        <label for="text-field">Текст письма:</label>
+        <textarea id="text-field" rows="4" name="text" placeholder="В свободной форме">
+        <input class="post-form-submit" type="submit" value="Отправить">
+      </form>
+    </div>
+    <div id="big-map" class="pop-up hidden"> <!--Большая карта проезда-->
+      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
+      <img src="#" width="600" height="400" alt="Подробная карта проезда">
+    </div>
   </body>
 </html>
