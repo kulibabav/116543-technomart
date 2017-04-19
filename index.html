@@ -7,243 +7,259 @@
   <body>
     <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
       <div class="container"> <!--Центрирование-->
-        <a href="#" class="header-logo" title="На главную"> <!--Поставил ссылку на главную, несмотря на то, что есть такой пункт меню, для удобства пользователей-->
+        <a class="header-logo">
+        <!--[ВОПРОС] Убрал href и title, но как-то странно кажется это...-->
           <h1>Техномарт</h1> <!--"Техномарт" это главный заголовок-->
         </a>
-        <input class="header-search" placeholder="Поиск">
-        <nav class="top-menu"> <!--Можно было этот nav не делать, но почему-то захотелось выделить эти три ссылки в один блок-->
-          <a href="#" class="header-bookmarks" title="Закладки">Закладки: <span class="bookmarks-count">0</span></a>
-          <a href="#" class="header-bin" title="Корзина">Корзина: <span class="bin-count">0</span></a>
-          <a href="#" class="header-order" title="Оформить заказ">Оформить заказ</a>
-        </nav>
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
+          <input id="header-search-field" type="text" name="q" placeholder="Поиск">
+          <input id="header-search-button" type="submit">
+        </form>
+        <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+        <a class="header-bin" href="#">Корзина: <span class="bin-count">0</span></a>
+        <a class="header-order" href="#">Оформить заказ</a>
       </div>
     </header>
     <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
       <div class="container"> <!--Центрирование-->
         <h2 class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</h2> <!--Решил, что это второстепенный заголовок-->
-        <div class="header-contacts"> <!--Выравнивает по вертикали телефон и адрес-->
-          <strong class="header-phone">+7 (812) 555-05-55</strong> <!--Телефон акцентирован, поэтому strong-->
+        <div class="header-contacts"> <!--Блок контактной информации-->
+          <a class="header-phone" href="#">+7 (812) 555-05-55</a>
+          <!--[ВОПРОС] Зачем тут ссылка? Чтобы по Скайпу звонить?;-)-->
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <nav class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
-          <ul class="user-menu-top"> <!--Белые "кнопочки"-->
-            <li><a href="#" title="Войти">Войти</a></li>
-            <li><a href="#" title="Регистрация">Регистрация</a></li>
-          </ul>
-          <ul class="user-menu-bottom hidden"> <!--Свойство hidden убирается только, когда пользователь вошёл на сайт-->
-            <li><a href="#" title="Мои заказы">Мои заказы</a></li>
-            <li><a href="#" title="Личный кабинет">Личный кабинет</a></li>
-          </ul>
-        </nav>
+        <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
+          <a class="user-menu-item login" href="#">Войти</a>
+          <a class="user-menu-item" href="#">Регистрация</a>
+        </div>
         <nav class="main-menu">
           <ul>
-            <li><a href="#" title="Главная">Главная</a></li>
-            <li><a href="#" title="Главная">Компания</a></li>
-            <li><a href="#" title="Главная">Каталог</a></li>
-            <li><a href="#" title="Главная">Новости</a></li>
-            <li><a href="#" title="Главная">Спецпредложения</a></li>
-            <li><a href="#" title="Главная">Доставка</a></li>
-            <li><a href="#" title="Главная">Контакты</a></li>
+            <li><a class="main-menu-item" href="#">Главная</a></li>
+            <li><a class="main-menu-item" href="#">Компания</a></li>
+            <li><a class="main-menu-item" href="#">Каталог</a></li>
+            <li><a class="main-menu-item" href="#">Новости</a></li>
+            <li><a class="main-menu-item" href="#">Спецпредложения</a></li>
+            <li><a class="main-menu-item" href="#">Доставка</a></li>
+            <li><a class="main-menu-item" href="#">Контакты</a></li>
           </ul>
+          <!--[ВОПРОС] Так в каких случаях используется ul, а в каких просто a?-->
+          <!--При динамическом формировании ul?-->
         </nav>
       </div>
     </header>
-    <main> <!--Т.к. фон отсутствует, то можно не вводить дополнительный центрирующий div-->
-      <section class="promo"> <!--Предполагается, что число и расположение внутренних блоков фиксировано, поэтому каждый блок имеет отдельный класс по номеру-->
-        <a href="#" class="first orange new">
-          <b>Материалы</b> <!--Бросается в глаза, но на strong не тянет-->
-          <em>На любой вкус</em> <!--Подчеркнуто полупрозрачным фоном и не похоже на ссылку (ссылка есть на весь блок), поэтому em-->
-        </a>
-        <a href="#" class="second blue">
-          <b>Инструмент</b>
-          <em>На все случаи</em>
-        </a>
-        <a href="#" class="third violet">
-          <b>Техника</b>
-          <em>Для стройки</em>
-        </a>
-        <div class="promo-slider">
-          <a href="#" class="promo-slider-header" title="Перфораторы"> <!--Полупрозрачный блок с заголовком и подписью,для удобства сделан ссылкой-->
-            <b>Перфораторы</b>
-            <p>Настоящие мужские игрушки</p>
-          </a>
-          <a href="#" class="arrow-left"></a> <!--Думаю, что по факту это будет вся левая половинка картинки под полупрозрачным блоком, а не только стрелочка-->
-          <a href="#" class="arrow-right"></a> <!--А это, соответственно, вся правая половинка-->
-          <a href="#" class="btn" title="Открыть каталог">Открыть каталог</a>
-          <ul class="active-slide">
-            <li class="active"></li>
-            <li></li>
-          </ul>
-        </div>
-        <a href="#" class="forth green">
-          <b>Скидки 50%</b>
-          <em>На 350 товаров</em>
-        </a>
-        <a href="#" class="fifth orange">
-          <b>Доставка</b>
-          <em>Бесплатно</em>
-        </a>
-      </section>
-      <section class="popular"> <!--Популярные товары и производители оформлены схожим образом, поэтому используем единый класс-->
-        <header class="popular-header">
-          <h3>Популярные товары:</h3>
-          <a href="#" class="btn">Все популярные товары</a>
-        </header>
-        <div class="catalog-4-1"> <!--4 столбца, 1 строка-->
-          <a href="#" title="Перфоратор BOSCH BFG 9000"> <!--Элемент каталога целиком-->
-            <img src="#" width="150" height="100" alt="Фото товара"> <!--При наведении на родительский блок добавляется класс hidden-->
-            <a href="#" class="add-to-bin">Купить</a>
-            <a href="#" class="add-to-bookmarks">В закладки</a>
-            <!--Кнопки при отустствии наведения на блок спрятаны под картинкой-->
-            <div class="product-name">Перфоратор BOSCH<br>BFG 9000</div>
-            <div class="old-price">32500 Р.</div>
-            <div class="current-price">25500 Р.</div>
-          </a>
-          <a href="#" title="Перфоратор BOSCH BFG 3000">
-            <img src="#" width="150" height="100" alt="Фото товара">
-            <a href="#" class="add-to-bin">Купить</a>
-            <a href="#" class="add-to-bookmarks">В закладки</a>
-            <div class="product-name">Перфоратор BOSCH<br>BFG 3000</div>
-            <div class="old-price">22500 Р.</div>
-            <div class="current-price">15500 Р.</div>
-          </a>
-          <a href="#" title="Перфоратор BOSCH BFG 6000">
-            <img src="#" width="150" height="100" alt="Фото товара">
-            <a href="#" class="add-to-bin">Купить</a>
-            <a href="#" class="add-to-bookmarks">В закладки</a>
-            <div class="product-name">Перфоратор BOSCH<br>BFG 6000</div>
-            <div class="old-price">30500 Р.</div>
-            <div class="current-price">25500 Р.</div>
-          </a>
-          <a href="#" title="Перфоратор BOSCH BFG 2000" class="new">
-            <img src="#" width="150" height="100" alt="Фото товара">
-            <a href="#" class="add-to-bin">Купить</a>
-            <a href="#" class="add-to-bookmarks">В закладки</a>
-            <div class="product-name">Перфоратор BOSCH<br>BFG 2000</div>
-            <div class="old-price hidden"></div>
-            <div class="current-price">12500 Р.</div>
-          </a>
-        </div>
-      </section>
-      <section class="popular">
-        <header class="popular-header">
-          <h3>Популярные производители:</h3>
-          <a href="#" class="btn">Все производители</a>
-        </header>
-        <div class="catalog-4-2"> <!--4 столбца, 2 строки-->
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-          <a href="#">
-            <img src="#" width="150" height="100" alt="Лого производителя">
-          </a>
-        </div>
-      </section>
-    </main> <!--Тут основной блок заканчивается, и начинаются различные дополнительные, это видно даже по цвету фона-->
-    <section class="services">
-      <div class="container"> <!--Центрирование-->
-        <header>
+    <main>
+      <div class="container"> <!--Первый блок центрирования (до раздела Сервисы)-->
+        <section class="categories">
+        <!--Семантический класс-->
+          <div class="categories-block-1 new">
+            <!--Предполагается, что число и расположение внутренних блоков фиксировано-->
+            <!--При этом логично сделать универсальное название, ведь при жизни сайта порядок и наполнение блоков может меняться-->
+            <!--Какие-то общие свойства (например, размер, отступы) можно задать по началу имени класса "сategories-block-..."-->
+            <!--А частные (например, цвет) уже по полному имени класса-->
+            <b>Материалы</b>
+            <a class="categories-btn" href="#">На любой вкус</a> <!--Полупрозрачная кнопка-->
+          </div>
+          <div class="categories-block-2">
+            <b>Инструмент</b>
+            <a class="categories-btn" href="#">На все случаи</a>
+          </div>
+          <div class="categories-block-3">
+            <b>Техника</b>
+            <a class="categories-btn" href="#">Для стройки</a>
+          </div>
+          <div class="categories-slider">
+          <!--[ВОПРОС] Открытый вопрос, как лучше сверстать данный блок-->
+            <a class="categories-slider-top" href="#"> <!--Полупрозрачный блок с заголовком и подписью,для удобства сделан ссылкой-->
+              <b>Перфораторы</b>
+              <p>Настоящие мужские игрушки</p>
+            </a>
+            <a class="categories-previous" href="#"></a> <!--Думаю, что по факту это будет вся левая половинка картинки под полупрозрачным блоком, а не только стрелочка-->
+            <a class="categories-next" href="#"></a> <!--А это, соответственно, вся правая половинка-->
+            <a class="btn" href="#">Открыть каталог</a>
+            <ul>
+              <li class="categories-page categories-active-page"></li>
+              <li class="categories-page"></li>
+            </ul>
+          </div>
+          <div class="categories-block-4">
+            <b>Скидки 50%</b>
+            <a class="categories-btn" href="#">На 350 товаров</a>
+          </div>
+          <div class="categories-block-5">
+            <b>Доставка</b>
+            <a class="categories-btn" href="#">Бесплатно</a>
+          </div>
+        </section>
+        <section class="popular-goods"> <!--Cемантический класс-->
+          <div class="popular-header"> <!--Серо-розовая плашка-->
+            <h3>Популярные товары:</h3>
+            <a class="btn" href="#">Все популярные товары</a>
+          </div>
+          <div class="products-catalog"> <!--4 столбца, 1 строка-->
+            <article class="catalog-item">
+            <!--Элемент каталога, имеет универсальный класс, предполагается что оформление-->
+            <!--элемента не зависит от того, что в каталоге (товары или производители)-->
+              <div class="product-actions"> <!--При наведении появляется поверх картинки-->
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 9000</h4> <!--<br> пока не ставил -->
+              <span class="old-price">32500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="current-price">15500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
+              <span class="old-price"></span> <!--Убрал класс hidden, т.к. по идее должно быть достаточно пустого содержания-->
+              <span class="current-price">12500 Р.</span>
+            </article>
+          </div>
+        </section>
+        <section class="popular-producers"> <!--Семантический класс-->
+          <div class="popular-header"> <!--Серо-розовая плашка-->
+            <h3>Популярные производители:</h3>
+            <a class="btn" href="#">Все производители</a>
+          </div>
+          <div class="producers-catalog"> <!--4 столбца, 2 строки-->
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+            <a class="catalog-item" href="#">
+              <img src="#" width="150" height="100" alt="Лого производителя">
+            </a>
+          </div>
+        </section>
+      </div>
+      <section class="services">
+        <div class="container"> <!--Центрирование-->
           <h3>Сервисы</h3>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами.
-            <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-        </header>
-        <div class="content"> <!--Объединяет меню сервисов и информацию по выбранному пункту-->
-          <nav>
-            <a href="#" class="active">Доставка</a>
-            <a href="#">Гарантия</a>
-            <a href="#">Кредит</a>
-          </nav>
-          <div class="description">
+          <div class="services-menu"> <!--Объединяет меню сервисов и информацию по выбранному пункту-->
+            <a class="services-menu-item active" href="#">Доставка</a>
+            <a class="services-menu-item" href="#">Гарантия</a>
+            <a class="services-menu-item" href="#">Кредит</a>
+          </div>
+          <div class="service-description">
             <b>Доставка</b>
             <p>
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-              <br>Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+              Ведь мы неплохо заработаем, поднимая его на ваш этаж!
             </p>
             <img src="#" width="150" height="100" alt="Картинка услуги">
             <!--[ВОПРОС] Надеюсь, картинку не придется в SVG отрисовывать?))-->
           </div>
-          <!--[ВОПРОС] Достаточно ли этого? Или нужно продумать механизм переключения пунктов?-->
+          <!--[ВОПРОС] Как верстаются описания различных пунктов меню сервисов и их переключение?-->
         </div>
+      </section>
+      <div class="container"> <!--Второй блок центрирования (до конца main)-->
+        <section class="about-us">
+          <div class="brief-description">
+            <h3>Компания &raquo;Техномарт&laquo;</h3>
+            <p>
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
+              и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+            </p>
+            <p>
+              Мы можем доставить ваш товар в самые отдаленные точки России!
+              Техномарт работает со многими транспортными компаниями:
+            </p>
+            <ul class="transport-partners">
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="btn" href="#">Подробнее о компании</a>
+          </div>
+          <div class="brief-contacts">
+            <h3>Контакты</h3>
+            <p>
+              Вы можете забрать товар сами,
+              заехав в наш офис:
+            </p>
+            <a class="mini-map">
+              <img src="#" width="250" height="150" alt="Большая Конюшенная ул., 19"> <!--Вырезка карты-->
+            </a>
+            <a class="btn stretched" href="#">Заблудились? Напишите нам!</a>
+            <!--[ВОПРОС] Нужен ли специальный класс stretched для растянутой кнопки-->
+          </div>
+        </section>
       </div>
-    </section>
-    <section class="brief-info">
-      <div class="container"> <!--Центрирование-->
-        <div class="brief-description">
-          <h3>Компания &raquo;Техномарт&laquo;</h3>
-          <p>
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
-            и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
-          </p>
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!
-            Техномарт работает со многими транспортными компаниями:
-          </p>
-          <ul class="red-dash">
-            <li>Делове линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a href="#" class="btn">Подробнее о компании</a>
-        </div>
-        <div class="brief-contacts">
-          <h3>Контакты</h3>
-          <p>
-            Вы можете забрать товар сами,
-            <br>заехав в наш офис:
-          </p>
-          <figure class="mini-map"></figure>
-          <a href="#" class="btn stretched">Заблудились? Напишите нам!</a> <!--Специальный класс stretched для растянутой кнопки-->
-          <!--[ВОПРОС] Случайно ли здесь расположение кнопок на одном горизонтальном уровне? Или нужно это специально выравнивать?-->
-        </div>
-      </div>
-    </section>
+    </main>
     <footer class="footer-top"> <!--Плашка с нижним меню-->
       <div class="container"> <!--Центрирование-->
-        <div class="left"> <!--Часть с логотипом и контактной информацией-->
+        <div class="footer-left"> <!--Часть с логотипом и контактной информацией-->
           <div class="footer-logo"> <!--Внизу решил, что ссылка на главную по логотипу будет уже перебором-->
               Техномарт <!--Также тут не нужен второй заголовок h1-->
           </div>
           <div class="footer-contacts">
-            г. Санкт-Перербург, ул. Б. Конюшенная, д.19/8
-            <br>+7 (812) 555-05-55
+            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+            +7 (812) 555-05-55
           </div>
         </div>
-        <div class="right"> <!--Часть с двумя менюшками-->
-          <nav class="main-menu"> <!--Стиль в точности похож-->
+        <div class="footer-right"> <!--Часть с двумя менюшками-->
+          <nav class="main-menu"> <!--Стиль в точности похож на главное меню в хэдере-->
             <ul>
-              <li><a href="#" title="Главная">Компания</a></li>
-              <li><a href="#" title="Главная">Новости</a></li>
-              <li><a href="#" title="Главная">Каталог</a></li>
-              <li><a href="#" title="Главная">Доставка</a></li>
-              <li><a href="#" title="Главная">Контакты</a></li>
+              <li><a class="main-menu-item" href="#">Компания</a></li>
+              <li><a class="main-menu-item" href="#">Новости</a></li>
+              <li><a class="main-menu-item" href="#">Каталог</a></li>
+              <li><a class="main-menu-item" href="#">Доставка</a></li>
+              <li><a class="main-menu-item" href="#">Контакты</a></li>
             </ul>
           </nav>
-          <nav class="main-menu additional-menu"> <!--Добавляется цвет и смещение вправо-->
+          <nav class="main-menu additional-menu">
+          <!--Класс additional-menu задаёт дополнительное смещение вправо-->
             <ul>
-              <li><a href="#" title="Главная">Материалы</a></li>
-              <li><a href="#" title="Главная">Техника</a></li>
-              <li><a href="#" title="Главная">Инструмент</a></li>
-              <li><a href="#" title="Главная">Спецпредложения</a></li>
+              <li><a class="main-menu-item additional-menu-item" href="#">Материалы</a></li>
+              <!--Класс additional-menu-item меняет цвет текста ссылки-->
+              <li><a class="main-menu-item additional-menu-item" href="#">Техника</a></li>
+              <li><a class="main-menu-item additional-menu-item" href="#">Инструмент</a></li>
+              <li><a class="main-menu-item additional-menu-item" href="#">Спецпредложения</a></li>
             </ul>
           </nav>
         </div>
@@ -251,22 +267,26 @@
     </footer>
     <footer class="footer-bottom"> <!--Тёмно-синяя плашка в самом низу страницы-->
       <div class="container"> <!--Центрирование-->
-        <div class="copyright">
-          @ 2010-2017 Компания "Техномарт"
-          <br>Все права защищены
+        <div class="footer-left"> <!--По аналогии с предыдущим футером, данный футер также разделяется на левую и правую часть-->
+          <div class="copyright">
+            &copy; 2010-2017 Компания "Техномарт"
+            Все права защищены
+          </div>
         </div>
-        <div class="social">
-          <a href="#" class="social-vk"></a>
-          <a href="#" class="social-facebook"></a>
-          <a href="#" class="social-instagram"></a>
-        </div>
-        <div class="feedback">
-          Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="developer">
-          Разработано &mdash;
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <div class="footer-right">
+          <div class="social">
+            <a class="social social-vk" href="#"></a>
+            <a class="social social-facebook" href="#"></a>
+            <a class="social social-instagram" href="#"></a>
+          </div>
+          <div class="feedback">
+            Обратная связь:
+            <a class="text-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="developer">
+            Разработано &mdash;
+            <a class="text-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
         </div>
       </div>
     </footer>
