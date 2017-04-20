@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+  </head>
+  <body>
+    <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
+      <div class="container"> <!--Центрирование-->
+        <a class="header-logo">
+          <span>Техномарт</span>
+          <!--[ВОПРОС] Верно, что на данной странице "Техномарт" - это не главный заголовок?-->
+        </a>
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
+          <input type="text" name="q" placeholder="Поиск">
+          <input type="submit">
+        </form>
+        <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+        <a class="header-bin header-bin-full" href="#">Корзина: <span class="bin-count">10</span></a>
+        <!--класс header-bin-full добавляется когда bin-count > 0, чтобы сделать красный фон-->
+        <a class="header-order" href="#">Оформить заказ</a>
+      </div>
+    </header>
+    <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
+      <div class="container"> <!--Центрирование-->
+        <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <!--[ВОПРОС] Тут тоже убрал h2 по сравнению с главной, чтобы повесить только h1 ниже на название категории-->
+        <div class="header-contacts"> <!--Блок контактной информации-->
+          <a class="header-phone" href="#">+7 (812) 555-05-55</a>
+          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
+          <a class="user-menu-item logout stretched" href="#"><span class="user-name">Равшан Джамшутович</span></a>
+          <!--[ВОПРОС] класс stretched уже появлялся на главной для растягивания кнопки-->
+          <!--Здесь также интересует вопрос необходимости его ввода-->
+        </div>
+        <div class="account-menu"> <!--Подменю появляется после входа на сайт-->
+          <a class="account-menu-item" href="#">Мои заказы</a> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
+          <a class="account-menu-item" href="#">Личный кабинет</a>
+        </div>
+        <nav class="main-menu">
+          <ul>
+            <li><a class="main-menu-item" href="#">Главная</a></li>
+            <li><a class="main-menu-item" href="#">Компания</a></li>
+            <li><a class="main-menu-item" href="#">Каталог</a></li>
+            <li><a class="main-menu-item" href="#">Новости</a></li>
+            <li><a class="main-menu-item" href="#">Спецпредложения</a></li>
+            <li><a class="main-menu-item" href="#">Доставка</a></li>
+            <li><a class="main-menu-item" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container"> <!--Первый блок центрирования (до раздела Сервисы)-->
+        <div class="bread-crumbs"> <!--Хлебные крошки, предполагаем, что домик отображается всегда псевдо-элементом-->
+          <span>Каталог</span><span>Инструмент</span><span>Перфораторы</span>
+        </div>
+        <section class="category-catalog">
+          <h1 class="category-header">Перфораторы</h1> <!--Вот он главный заголовок-->
+          <div class="catalog-filter">
+            <div class="catalog-filter-header">Фильтр:</div>
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get"> <!--Фильтры-->
+              <label for="price-range">
+                Цена:
+                <input id="price-range" type="range" range1 range2 0 maxvalue>
+                <input id="price-range" type="range1" value="0">
+                &mdash;
+                <input id="price-range" type="range2" value="30000">
+              </label>
+              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
+              <div class="filter-form-divider"></div>
+              <!--[ВОПРОС] Или лучше псевдо-элементом к label?-->
+              <label for="producers-list">
+                <input id="producers-list" type="checkbox" state="on" value="BOSCH">
+                <input id="producers-list" type="checkbox" state="off" value="ИНТЕРСКОЛ">
+                <input id="producers-list" type="checkbox" state="on" value="MAKITA">
+                <input id="producers-list" type="checkbox" state="off" value="DEWALT">
+                <input id="producers-list" type="checkbox" state="off" value="HITACHI">
+              </label>
+              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
+              <div class="filter-form-divider"></div>
+              <label for="power-type">
+                <input id="power-type" type="radiobutton" active value="Аккумуляторные">
+                <input id="power-type" type="radiobutton" value="Сетевые">
+              </label>
+              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
+              <input type="submit" value="Показать">
+            </form>
+          </div>
+          <div class="catalog-sort">
+            <span>Сортировка:</span>
+            <a class="catalog-sort-price sort-parameter-active" href="#">По цене:</a>
+            <a class="catalog-sort-type" href="#">По типу:</a>
+            <a class="catalog-sort-functions" href="#">По функционалу:</a>
+            <a class="catalog-sort-asc sort-direction-active" href="#"></a> <!--Треугольничек вверх, asc = ascending-->
+            <a class="catalog-sort-desc" href="#"></a> <!--Треугольничек вниз, desc = descending-->
+          </div>
+          <div class="products-catalog"> <!--3 столбца, 3 строки-->
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="current-price">15500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="catalog-item new">
+              <div class="product-actions">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
+              <span class="old-price"></span>
+              <span class="current-price">12500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="current-price">15500 Р.</span>
+            </article>
+            <article class="catalog-item new">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
+              <span class="old-price"></span>
+              <span class="current-price">12500 Р.</span>
+            </article>
+            <article class="catalog-item new">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="current-price">15500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="catalog-item">
+              <div class="product-actions hidden">
+                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="#" width="150" height="100" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
+              <span class="old-price"></span>
+              <span class="current-price">12500 Р.</span>
+            </article>
+          </div>
+          <div class="catalog-pages">
+            <a class="catalog-page catalog-active-page">1<a>
+            <a class="catalog-page" href="#">2<a>
+            <a class="catalog-page" href="#">3<a>
+            <a class="catalog-page catalog-next-page" href="#">Следующая<a>
+          </div>
+        </section>
+      </div>
+      <section class="category-about">
+        <div class="container"> <!--Центрирование-->
+          <h3>Пара слов о перфораторах</h3>
+          <p>
+            Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+            В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;, в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-top"> <!--Плашка с нижним меню-->
+      <div class="container"> <!--Центрирование-->
+        <div class="footer-left"> <!--Часть с логотипом и контактной информацией-->
+          <div class="footer-logo"> <!--Внизу решил, что ссылка на главную по логотипу будет уже перебором-->
+              Техномарт <!--Также тут не нужен второй заголовок h1-->
+          </div>
+          <div class="footer-contacts">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+            +7 (812) 555-05-55
+          </div>
+        </div>
+        <div class="footer-right"> <!--Часть с двумя менюшками-->
+          <nav class="main-menu"> <!--Стиль в точности похож на главное меню в хэдере-->
+            <ul>
+              <li><a class="main-menu-item" href="#">Компания</a></li>
+              <li><a class="main-menu-item" href="#">Новости</a></li>
+              <li><a class="main-menu-item" href="#">Каталог</a></li>
+              <li><a class="main-menu-item" href="#">Доставка</a></li>
+              <li><a class="main-menu-item" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <nav class="main-menu additional-menu">
+          <!--Класс additional-menu задаёт дополнительное смещение вправо-->
+            <ul>
+              <li><a class="main-menu-item additional-menu-item" href="#">Материалы</a></li>
+              <!--Класс additional-menu-item меняет цвет текста ссылки-->
+              <li><a class="main-menu-item additional-menu-item" href="#">Техника</a></li>
+              <li><a class="main-menu-item additional-menu-item" href="#">Инструмент</a></li>
+              <li><a class="main-menu-item additional-menu-item" href="#">Спецпредложения</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-bottom"> <!--Тёмно-синяя плашка в самом низу страницы-->
+      <div class="container"> <!--Центрирование-->
+        <div class="footer-left"> <!--По аналогии с предыдущим футером, данный футер также разделяется на левую и правую часть-->
+          <div class="copyright">
+            &copy; 2010-2017 Компания "Техномарт"
+            Все права защищены
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="social">
+            <a class="social social-vk" href="#"></a>
+            <a class="social social-facebook" href="#"></a>
+            <a class="social social-instagram" href="#"></a>
+          </div>
+          <div class="feedback">
+            Обратная связь:
+            <a class="text-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="developer">
+            Разработано &mdash;
+            <a class="text-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="write-us" class="pop-up hidden"> <!--Форма обратной связи-->
+      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
+      <form class="post-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="post-form-left"> <!--Половина ширины слева-->
+          <label for="name-field">Ваше имя:</label>
+          <input id="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="post-form-right"> <!--Половина ширины справа-->
+          <label for="email-field">Ваш e-mail:</label>
+          <input id="email-field" type="email" name="email" placeholder="Для отправки ответа">
+        </div>
+        <label for="text-field">Текст письма:</label>
+        <textarea id="text-field" rows="4" name="text" placeholder="В свободной форме">
+        <input class="post-form-submit" type="submit" value="Отправить">
+      </form>
+    </div>
+    <div id="big-map" class="pop-up hidden"> <!--Большая карта проезда-->
+      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
+      <img src="#" width="600" height="400" alt="Подробная карта проезда">
+    </div>
+  </body>
+</html>
