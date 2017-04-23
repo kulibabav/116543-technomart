@@ -16,7 +16,7 @@
           <input type="submit">
         </form>
         <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="header-bin" href="#">Корзина: <span class="bin-count">0</span></a>
+        <a class="header-cart" href="#">Корзина: <span class="cart-count">0</span></a>
         <a class="header-order" href="#">Оформить заказ</a>
       </div>
     </header>
@@ -100,7 +100,7 @@
             <!--Элемент каталога, имеет универсальный класс, предполагается что оформление-->
             <!--элемента не зависит от того, что в каталоге (товары или производители)-->
               <div class="product-actions hidden"> <!--При наведении появляется поверх картинки-->
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -110,7 +110,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -120,7 +120,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -130,7 +130,7 @@
             </article>
             <article class="catalog-item new">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -307,6 +307,7 @@
       </form>
     </div>
     <div id="big-map" class="pop-up hidden"> <!--Большая карта проезда-->
+      <!--[ВОПРОС] Верхнюю красную границу (которая есть для других поп-апов) можно убрать по id либо добавить класс "no-border"?-->
       <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
       <img src="#" width="600" height="400" alt="Подробная карта проезда">
     </div>

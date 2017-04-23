@@ -16,8 +16,8 @@
           <input type="submit">
         </form>
         <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="header-bin header-bin-full" href="#">Корзина: <span class="bin-count">10</span></a>
-        <!--класс header-bin-full добавляется когда bin-count > 0, чтобы сделать красный фон-->
+        <a class="header-cart header-cart-full" href="#">Корзина: <span class="cart-count">10</span></a>
+        <!--класс header-cart-full добавляется когда cart-count > 0, чтобы сделать красный фон-->
         <a class="header-order" href="#">Оформить заказ</a>
       </div>
     </header>
@@ -61,30 +61,34 @@
           <div class="catalog-filter">
             <div class="catalog-filter-header">Фильтр:</div>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="get"> <!--Фильтры-->
-              <label for="price-range">
-                Цена:
-                <input id="price-range" type="range" range1 range2 0 maxvalue>
-                <input id="price-range" type="range1" value="0">
-                &mdash;
-                <input id="price-range" type="range2" value="30000">
-              </label>
-              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
-              <div class="filter-form-divider"></div>
-              <!--[ВОПРОС] Или лучше псевдо-элементом к label?-->
-              <label for="producers-list">
-                <input id="producers-list" type="checkbox" state="on" value="BOSCH">
-                <input id="producers-list" type="checkbox" state="off" value="ИНТЕРСКОЛ">
-                <input id="producers-list" type="checkbox" state="on" value="MAKITA">
-                <input id="producers-list" type="checkbox" state="off" value="DEWALT">
-                <input id="producers-list" type="checkbox" state="off" value="HITACHI">
-              </label>
-              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
-              <div class="filter-form-divider"></div>
-              <label for="power-type">
-                <input id="power-type" type="radiobutton" active value="Аккумуляторные">
-                <input id="power-type" type="radiobutton" value="Сетевые">
-              </label>
-              <!--[ВОПРОС] Большо-о-ой вопрос, как этот блок делать-->
+              <fieldset>
+                <legend>Цена:</legend>
+                <input name="price-range" type="range" min="0" max="35000" value="0, 30000" multiple>
+                <!--[ВОПРОС] Тут без JavaScript, похоже, не обойтись?-->
+                <output name="price-min" value="0">
+                <span>&mdash;</span>
+                <output name="price-max" value="30000">
+              </fieldset>
+              <fieldset>
+                <legend>Производители:</legend>
+                <input type="checkbox" name="poducer-1" id="producer-1-checkbox" checked>
+                <label for="producer-1-checkbox">Bosch</label>
+                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
+                <label for="producer-1-checkbox">Интерскол</label>
+                <input type="checkbox" name="poducer-1" id="producer-1-checkbox" checked>
+                <label for="producer-1-checkbox">Makita</label>
+                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
+                <label for="producer-1-checkbox">Dewalt</label>
+                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
+                <label for="producer-1-checkbox">Hitachi</label>
+              </fieldset>
+              <fieldset>
+                <legend>Питание:</legend>
+                <input type="radio" name="power-type" id="power-type-1" value="1" checked>
+                <label for="power-type-1">Аккумуляторные</label>
+                <input type="radio" name="power-type" id="power-type-2" value="2">
+                <label for="power-type-2">Сетевые</label>
+              </fieldset>
               <input type="submit" value="Показать">
             </form>
           </div>
@@ -99,7 +103,7 @@
           <div class="products-catalog"> <!--3 столбца, 3 строки-->
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -109,7 +113,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -119,7 +123,7 @@
             </article>
             <article class="catalog-item new">
               <div class="product-actions">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -129,7 +133,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -139,7 +143,7 @@
             </article>
             <article class="catalog-item new">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -149,7 +153,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -159,7 +163,7 @@
             </article>
             <article class="catalog-item new">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -169,7 +173,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -179,7 +183,7 @@
             </article>
             <article class="catalog-item">
               <div class="product-actions hidden">
-                <a class="add-to-bin" href="#">Купить</a>
+                <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="#" width="150" height="100" alt="Фото товара">
@@ -266,25 +270,14 @@
         </div>
       </div>
     </footer>
-    <div id="write-us" class="pop-up hidden"> <!--Форма обратной связи-->
+    <div id="cart-plus" class="pop-up hidden"> <!--Уведомление о добавлении в корзину-->
+      <!--[ВОПРОС] Верхнюю красную границу (которая есть для других поп-апов) можно убрать по id либо добавить класс "no-border"?-->
       <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
-      <form class="post-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="post-form-left"> <!--Половина ширины слева-->
-          <label for="name-field">Ваше имя:</label>
-          <input id="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-        </div>
-        <div class="post-form-right"> <!--Половина ширины справа-->
-          <label for="email-field">Ваш e-mail:</label>
-          <input id="email-field" type="email" name="email" placeholder="Для отправки ответа">
-        </div>
-        <label for="text-field">Текст письма:</label>
-        <textarea id="text-field" rows="4" name="text" placeholder="В свободной форме">
-        <input class="post-form-submit" type="submit" value="Отправить">
-      </form>
-    </div>
-    <div id="big-map" class="pop-up hidden"> <!--Большая карта проезда-->
-      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
-      <img src="#" width="600" height="400" alt="Подробная карта проезда">
+      <b class="cart-plus-notification">Товар добавлен в корзину!</b>
+      <div class="pop-up-bottom"> <!--Нижняя серая часть-->
+        <a class="btn" href="#">Оформить заказ</a>
+        <a class="btn-weak" href="#">Продолжить покупки</a>
+      </div>
     </div>
   </body>
 </html>
