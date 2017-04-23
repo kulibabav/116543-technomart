@@ -2,14 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
     <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
       <div class="container"> <!--Центрирование-->
-        <a class="header-logo">
-          <span>Техномарт</span>
-          <!--[ВОПРОС] Верно, что на данной странице "Техномарт" - это не главный заголовок?-->
+        <a class="header-logo" href="/" title="На главную">
+          <h1>Техномарт</h1>
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
           <input type="text" name="q" placeholder="Поиск">
@@ -17,36 +18,36 @@
         </form>
         <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
         <a class="header-cart header-cart-full" href="#">Корзина: <span class="cart-count">10</span></a>
-        <!--класс header-cart-full добавляется когда cart-count > 0, чтобы сделать красный фон-->
+        <!--класс header-cart-full будет задавать красный фон и добавляться, когда cart-count > 0-->
         <a class="header-order" href="#">Оформить заказ</a>
       </div>
     </header>
     <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
       <div class="container"> <!--Центрирование-->
-        <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <!--[ВОПРОС] Тут тоже убрал h2 по сравнению с главной, чтобы повесить только h1 ниже на название категории-->
+        <h2 class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</h2>
         <div class="header-contacts"> <!--Блок контактной информации-->
-          <a class="header-phone" href="#">+7 (812) 555-05-55</a>
+          <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
-          <a class="user-menu-item logout stretched" href="#"><span class="user-name">Равшан Джамшутович</span></a>
-          <!--[ВОПРОС] класс stretched уже появлялся на главной для растягивания кнопки-->
-          <!--Здесь также интересует вопрос необходимости его ввода-->
-        </div>
-        <div class="account-menu"> <!--Подменю появляется после входа на сайт-->
-          <a class="account-menu-item" href="#">Мои заказы</a> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
-          <a class="account-menu-item" href="#">Личный кабинет</a>
+          <div class="user-menu-top"> <!--Белый фон кнопок-->
+            <a class="user-profile" href="#"><span class="user-name">Равшан Джамшутович</span></a>
+            <a class="logout" href="#"></a>
+          </div>
+          <div class="user-menu-bottom"> <!--Подменю появляется после входа на сайт-->
+            <a href="#">Мои заказы</a> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
+            <a href="#">Личный кабинет</a>
+          </div>
         </div>
         <nav class="main-menu">
           <ul>
-            <li><a class="main-menu-item" href="#">Главная</a></li>
-            <li><a class="main-menu-item" href="#">Компания</a></li>
-            <li><a class="main-menu-item" href="#">Каталог</a></li>
-            <li><a class="main-menu-item" href="#">Новости</a></li>
-            <li><a class="main-menu-item" href="#">Спецпредложения</a></li>
-            <li><a class="main-menu-item" href="#">Доставка</a></li>
-            <li><a class="main-menu-item" href="#">Контакты</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li><a>Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -54,41 +55,48 @@
     <main>
       <div class="container"> <!--Первый блок центрирования (до раздела Сервисы)-->
         <div class="bread-crumbs"> <!--Хлебные крошки, предполагаем, что домик отображается всегда псевдо-элементом-->
-          <span>Каталог</span><span>Инструмент</span><span>Перфораторы</span>
+          <a class="bread-home" href="/"></a><a href="#">Каталог</a><a href="#">Инструмент</a><a>Перфораторы</a>
+          <!--Последняя ссылка без href, чтобы не перезагружать страницу-->
         </div>
-        <section class="category-catalog">
-          <h1 class="category-header">Перфораторы</h1> <!--Вот он главный заголовок-->
+        <section class="category">
+          <h3 class="category-header">Перфораторы</h3>
           <div class="catalog-filter">
-            <div class="catalog-filter-header">Фильтр:</div>
+            <div class="catalog-header">Фильтр:</div>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="get"> <!--Фильтры-->
-              <fieldset>
-                <legend>Цена:</legend>
-                <input name="price-range" type="range" min="0" max="35000" value="0, 30000" multiple>
-                <!--[ВОПРОС] Тут без JavaScript, похоже, не обойтись?-->
-                <output name="price-min" value="0">
-                <span>&mdash;</span>
-                <output name="price-max" value="30000">
-              </fieldset>
-              <fieldset>
-                <legend>Производители:</legend>
-                <input type="checkbox" name="poducer-1" id="producer-1-checkbox" checked>
-                <label for="producer-1-checkbox">Bosch</label>
-                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
-                <label for="producer-1-checkbox">Интерскол</label>
-                <input type="checkbox" name="poducer-1" id="producer-1-checkbox" checked>
-                <label for="producer-1-checkbox">Makita</label>
-                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
-                <label for="producer-1-checkbox">Dewalt</label>
-                <input type="checkbox" name="poducer-1" id="producer-1-checkbox">
-                <label for="producer-1-checkbox">Hitachi</label>
-              </fieldset>
-              <fieldset>
-                <legend>Питание:</legend>
-                <input type="radio" name="power-type" id="power-type-1" value="1" checked>
-                <label for="power-type-1">Аккумуляторные</label>
-                <input type="radio" name="power-type" id="power-type-2" value="2">
-                <label for="power-type-2">Сетевые</label>
-              </fieldset>
+              <div class="filter-section">
+                <b>Цена:</b>
+                <div class="range-indicator">
+                  <div class="range-line">
+                    <div class="range-line-active">
+                    </div>
+                  </div>
+                </div>
+                <div class="field-line">
+                  <input class="important-field" type="number" name="price-min" value="0">
+                  <span>&mdash;</span>
+                  <input class="important-field" type="number" name="price-max" value="30000">
+                </div>
+              </div>
+              <div class="filter-section">
+                <b>Производители:</b>
+                <input type="checkbox" name="producer-bosch" id="producer-checkbox-bosch" checked>
+                <label for="producer-checkbox-bosch">Bosch</label>
+                <input type="checkbox" name="producer-interskol" id="producer-checkbox-interskol">
+                <label for="producer-checkbox-interskol">Интерскол</label>
+                <input type="checkbox" name="producer-makita" id="producer-checkbox-makita" checked>
+                <label for="producer-checkbox-makita">Makita</label>
+                <input type="checkbox" name="producer-dewalt" id="producer-checkbox-dewalt">
+                <label for="producer-checkbox-dewalt">Dewalt</label>
+                <input type="checkbox" name="producer-hitachi" id="producer-checkbox-hitachi">
+                <label for="producer-checkbox-hitachi">Hitachi</label>
+              </div>
+              <div class="filter-section">
+                <b>Питание:</b>
+                <input type="radio" name="power-type" id="power-type-battery" value="1" checked>
+                <label for="power-type-battery">Аккумуляторные</label>
+                <input type="radio" name="power-type" id="power-type-plug" value="2">
+                <label for="power-type-plug">Сетевые</label>
+              </div>
               <input type="submit" value="Показать">
             </form>
           </div>
@@ -101,109 +109,110 @@
             <a class="catalog-sort-desc" href="#"></a> <!--Треугольничек вниз, desc = descending-->
           </div>
           <div class="products-catalog"> <!--3 столбца, 3 строки-->
-            <article class="catalog-item">
-              <div class="product-actions hidden">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
-              </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
-              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
-              <span class="old-price">22500 Р.</span>
-              <span class="current-price">15500 Р.</span>
-            </article>
-            <article class="catalog-item">
-              <div class="product-actions hidden">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
-              </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
-              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
-              <span class="old-price">30500 Р.</span>
-              <span class="current-price">25500 Р.</span>
-            </article>
-            <article class="catalog-item new">
+            <article class="products-catalog-item">
               <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
-              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
-              <span class="old-price"></span>
-              <span class="current-price">12500 Р.</span>
-            </article>
-            <article class="catalog-item">
-              <div class="product-actions hidden">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
-              </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
               <span class="old-price">22500 Р.</span>
               <span class="current-price">15500 Р.</span>
             </article>
-            <article class="catalog-item new">
-              <div class="product-actions hidden">
+            <article class="products-catalog-item">
+              <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-6000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
               <span class="old-price">30500 Р.</span>
               <span class="current-price">25500 Р.</span>
             </article>
-            <article class="catalog-item">
-              <div class="product-actions hidden">
+            <article class="products-catalog-item new">
+              <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-2000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               <span class="old-price"></span>
               <span class="current-price">12500 Р.</span>
             </article>
-            <article class="catalog-item new">
-              <div class="product-actions hidden">
+            <article class="products-catalog-item">
+              <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
               <span class="old-price">22500 Р.</span>
               <span class="current-price">15500 Р.</span>
             </article>
-            <article class="catalog-item">
-              <div class="product-actions hidden">
+            <article class="products-catalog-item new">
+              <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-6000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
               <span class="old-price">30500 Р.</span>
               <span class="current-price">25500 Р.</span>
             </article>
-            <article class="catalog-item">
-              <div class="product-actions hidden">
+            <article class="products-catalog-item">
+              <div class="product-actions">
                 <a class="add-to-cart" href="#">Купить</a>
                 <a class="add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="#" width="150" height="100" alt="Фото товара">
+              <img src="img/product-bosch-bfg-2000.jpg" width="200" height="150" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
+              <span class="old-price"></span>
+              <span class="current-price">12500 Р.</span>
+            </article>
+            <article class="products-catalog-item new">
+              <div class="product-actions">
+                <a class="add-to-cart" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="current-price">15500 Р.</span>
+            </article>
+            <article class="products-catalog-item">
+              <div class="product-actions">
+                <a class="add-to-cart" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="img/product-bosch-bfg-6000.jpg" width="200" height="150" alt="Фото товара">
+              <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="current-price">25500 Р.</span>
+            </article>
+            <article class="products-catalog-item">
+              <div class="product-actions">
+                <a class="add-to-cart" href="#">Купить</a>
+                <a class="add-to-bookmarks" href="#">В закладки</a>
+              </div>
+              <img src="img/product-bosch-bfg-2000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               <span class="old-price"></span>
               <span class="current-price">12500 Р.</span>
             </article>
           </div>
-          <div class="catalog-pages">
-            <a class="catalog-page catalog-active-page">1<a>
-            <a class="catalog-page" href="#">2<a>
-            <a class="catalog-page" href="#">3<a>
-            <a class="catalog-page catalog-next-page" href="#">Следующая<a>
+          <div class="catalog-paginator">
+            <a class="active-page">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Следующая</a>
+            <!--[ВОПРОС] Подстановка ссылки на нужную страницу - программным путем? Тогда нужно дать кнопке и paginator-у какие-то id-шники?-->
           </div>
         </section>
       </div>
       <section class="category-about">
         <div class="container"> <!--Центрирование-->
-          <h3>Пара слов о перфораторах</h3>
-          <p>
+          <h3 class="section-header">Пара слов о перфораторах</h3>
+          <p class="section-content">
             Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;, в одном устройстве будут совмещены отбойный молоток и ударная дрель.
@@ -213,9 +222,9 @@
     </main>
     <footer class="footer-top"> <!--Плашка с нижним меню-->
       <div class="container"> <!--Центрирование-->
-        <div class="footer-left"> <!--Часть с логотипом и контактной информацией-->
-          <div class="footer-logo"> <!--Внизу решил, что ссылка на главную по логотипу будет уже перебором-->
-              Техномарт <!--Также тут не нужен второй заголовок h1-->
+        <div class="footer-left"> <!--Часть с логотипом и контактной информацией без ссылок и заголовков-->
+          <div class="footer-logo">
+              Техномарт
           </div>
           <div class="footer-contacts">
             г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
@@ -223,23 +232,22 @@
           </div>
         </div>
         <div class="footer-right"> <!--Часть с двумя менюшками-->
-          <nav class="main-menu"> <!--Стиль в точности похож на главное меню в хэдере-->
+          <nav class="footer-menu"> <!--Стиль в точности похож на главное меню в хэдере-->
             <ul>
-              <li><a class="main-menu-item" href="#">Компания</a></li>
-              <li><a class="main-menu-item" href="#">Новости</a></li>
-              <li><a class="main-menu-item" href="#">Каталог</a></li>
-              <li><a class="main-menu-item" href="#">Доставка</a></li>
-              <li><a class="main-menu-item" href="#">Контакты</a></li>
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
-          <nav class="main-menu additional-menu">
-          <!--Класс additional-menu задаёт дополнительное смещение вправо-->
+          <nav class="footer-menu additional-menu">
+          <!--Класс additional-menu задаёт дополнительное смещение вправо и цвет вложенных ссылок-->
             <ul>
-              <li><a class="main-menu-item additional-menu-item" href="#">Материалы</a></li>
-              <!--Класс additional-menu-item меняет цвет текста ссылки-->
-              <li><a class="main-menu-item additional-menu-item" href="#">Техника</a></li>
-              <li><a class="main-menu-item additional-menu-item" href="#">Инструмент</a></li>
-              <li><a class="main-menu-item additional-menu-item" href="#">Спецпредложения</a></li>
+              <li><a href="#">Материалы</a></li>
+              <li><a href="#">Техника</a></li>
+              <li><a href="#">Инструмент</a></li>
+              <li><a href="#">Спецпредложения</a></li>
             </ul>
           </nav>
         </div>
@@ -270,13 +278,12 @@
         </div>
       </div>
     </footer>
-    <div id="cart-plus" class="pop-up hidden"> <!--Уведомление о добавлении в корзину-->
-      <!--[ВОПРОС] Верхнюю красную границу (которая есть для других поп-апов) можно убрать по id либо добавить класс "no-border"?-->
-      <a class="pop-up-close" href="#"></a> <!--Крестик, закрывающий форму-->
+    <div class="pop-up cart-plus"> <!--Уведомление о добавлении в корзину-->
+      <button class="pop-up-close" name="cart-plus-close"></button> <!--Крестик, закрывающий форму-->
       <b class="cart-plus-notification">Товар добавлен в корзину!</b>
       <div class="pop-up-bottom"> <!--Нижняя серая часть-->
         <a class="btn" href="#">Оформить заказ</a>
-        <a class="btn-weak" href="#">Продолжить покупки</a>
+        <button class="button-weak" name="cart-plus-continue">Продолжить покупки</button>
       </div>
     </div>
   </body>
