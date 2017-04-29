@@ -1,14 +1,20 @@
+/*Шрифты*/
+
 body {
   font-family: "PT Sans", "Arial", serif;
   font-size: 13px;
   font-weight: normal;
-  color: #000000;
   line-height: 24px;
 }
 
 h1, h2 ,h3 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 h1 {
@@ -31,4 +37,456 @@ h3 {
   color: #000000;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+/*Сетка*/
+
+body {
+  background-image: url("../img/technomart-index.jpg");
+  background-repeat: no-repeat;
+  background-position: center 8px;
+}
+
+header, footer, main, div, section, nav, h1, h2, h3, p, article, li, a {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.container {
+  width: 940px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Верхняя плашка*/
+
+.header-top {
+  text-align: right;
+  line-height: 41px;
+}
+
+.header-logo {
+  display: block;
+  float: left;
+  width: 220px;
+}
+
+.header-logo h1 {
+  text-align: center;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.header-search {
+  float: left;
+  width: 200px;
+  line-height: inherit;
+}
+
+.header-search input[type="submit"] {
+  display: none;
+}
+
+.header-order, .header-cart, .header-bookmarks {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 40px;
+  line-height: inherit;
+}
+
+/*Вторая сверху плашка*/
+
+.header-bottom {
+  min-height: 232px;
+  padding-top: 46px;
+  margin-bottom: 59px;
+}
+
+.header-description {
+  float: left;
+  width: 300px;
+  margin-top: 2px;
+  margin-right: 20px;
+}
+
+.header-contacts {
+  float: left;
+  width: 270px;
+}
+
+.header-phone {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+}
+
+.header-address {
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+.user-menu {
+  float: right;
+  width: 300px;
+  text-align: right;
+}
+
+.user-menu a {
+  display: inline-block;
+  height: 45px;
+  padding: 0 20px;
+  margin-left: 20px;
+  line-height: 45px;
+}
+
+.main-menu {
+  margin-top: 35px;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.main-menu a {
+  display: block;
+  height: 60px;
+  padding: 0 20px;
+  line-height: 60px;
+}
+
+.highlights {
+  margin-bottom: 32px;
+}
+
+.highlight {
+  float: right;
+  position: relative;
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px;
+}
+
+.highlight a {
+  display: block;
+  position: absolute;
+  left: 25px;
+  bottom: 22px;
+  height: 38px;
+  padding: 0 20px;
+  line-height: 38px;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.highlight-materials {
+  float: left;
+  margin-right: 20px;
+}
+
+.highlight-equipment {
+  float: left;
+}
+
+.highlights-slider {
+  float: left;
+  width: 620px;
+  height: 266px;
+}
+
+.popular-products {
+  margin-bottom: 20px;
+}
+
+.popular-header {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.popular-header h3 {
+  margin: 0;
+  height: 90px;
+  line-height: 90px;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 38px;
+  vertical-align: middle;
+  padding: 0 40px;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.popular-header a {
+  position: absolute;
+  top: 26px;
+  right: 24px;
+}
+
+.products-catalog-item {
+  float: left;
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  position: relative;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.products-catalog-item:nth-child(3) {
+  margin-right: 0;
+}
+
+.products-catalog-item:nth-child(4) {
+  float: right;
+  margin-right: 0;
+}
+
+.product-actions {
+  visibility: hidden;
+  position: absolute;
+}
+
+.product-actions:hover {
+  visibility: visible;
+}
+
+.product-action a {
+  display: block;
+}
+
+.products-catalog-item span {
+  display: block;
+}
+
+.popular-producers {
+  margin-bottom: 65px;
+}
+
+.producers-catalog-item {
+  display: block;
+  float: left;
+  width: 220px;
+  height: 145px;
+  line-height: 145px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.producers-catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.producers-catalog-item:nth-child(4n) {
+  float: right;
+  margin-right: 0;
+}
+
+.producers-catalog-item img {
+  vertical-align: middle;
+}
+
+.services {
+  padding-top: 67px;
+  margin-bottom: 80px;
+  min-height: 456px;
+}
+
+.section-header {
+  background-color: rgba(0, 255, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.section-content {
+  margin-bottom: 24px;
+}
+
+.services-slider {
+  padding-top: 48px;
+}
+
+input[name="services-toggle"] {
+  display: none;
+}
+
+.services-slider-controls {
+  float: left;
+  width: 240px;
+}
+
+.services-slider-controls label{
+  display: block;
+  height: 46px;
+  font-size: 20px;
+  padding-top: 14px;
+  padding-left: 20px;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.services-slider-controls label:nth-child(2) {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.services-slides {
+  float: right;
+  width: 620px;
+}
+
+.services-slide b {
+  display: block;
+  font-size: 33px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.services-slide-guaranty, .services-slide-loan {
+  display: none;
+}
+
+.about-us {
+  margin-bottom: 86px;
+}
+
+.brief-description {
+  float: left;
+  width: 600px;
+}
+
+.brief-contacts {
+  float: right;
+  width: 300px;
+}
+
+.road-map-small {
+  display: block;
+  margin-top: 31px;
+  margin-bottom: 40px;
+}
+
+.road-map-small img {
+  display: block;
+}
+
+.brief-contacts .btn {
+  text-align: center;
+  display: block;
+  width: auto;
+}
+
+.transport-partners {
+  font-size: 18px;
+  list-style-type: none;
+  padding: 0;
+  padding-top: -5px;
+  margin: 0;
+  margin-bottom: 31px;
+  position: relative;
+  top: -5px;
+}
+
+.transport-partners li {
+  margin-bottom: 15px;
+  padding-left: 37px;
+}
+
+.footer-top {
+  height: 193px;
+}
+
+.footer-left {
+  float: left;
+  width: 350px;
+}
+
+.footer-right {
+  float: right;
+  width: 550px;
+  padding-top: 18px;
+  text-align: right;
+}
+
+.additional-menu {
+  color: darkorange;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.footer-menu a {
+  font-size: 16px;
+  font-stretch: condensed;
+  display: block;
+  height: 58px;
+  padding: 0 30px;
+  line-height: 60px;
+}
+
+.footer-menu li:first-child a {
+  padding-left: 0;
+}
+
+.footer-menu li:last-child a {
+  padding-right: 0;
+}
+
+.footer-logo {
+  width: 220px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 63px;
+  background-color: rgba(0, 255, 0, 0.5);
+  margin-bottom: 32px;
+}
+
+.footer-contacts {
+  font-size: 18px;
+}
+
+.pop-up {
+  display: none;
+}
+
+.footer-bottom {
+  height: 107px;
+}
+
+.footer-right > div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  line-height: 18px;
+}
+
+.copyright {
+  font-size: 16px;
+  margin-top: 37px;
+  line-height: 18px;
 }
