@@ -6,9 +6,9 @@
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Техномарт</title>
   </head>
-  <body>
+  <body class="body-category">
     <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
-      <div class="container"> <!--Центрирование-->
+      <div class="container clearfix"> <!--Центрирование-->
         <a class="header-logo" href="/" title="На главную">
           <h1>Техномарт</h1>
         </a>
@@ -23,7 +23,7 @@
       </div>
     </header>
     <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
-      <div class="container"> <!--Центрирование-->
+      <div class="container clearfix"> <!--Центрирование-->
         <h2 class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</h2>
         <div class="header-contacts"> <!--Блок контактной информации-->
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -39,20 +39,20 @@
             <a href="#">Личный кабинет</a>
           </div>
         </div>
-        <nav class="main-menu">
-          <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a>Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav class="main-menu container">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a>Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
+    <main class="main-category">
       <div class="container"> <!--Первый блок центрирования (до раздела Сервисы)-->
         <div class="bread-crumbs"> <!--Хлебные крошки, предполагаем, что домик отображается всегда псевдо-элементом-->
           <a class="bread-home" href="/"></a><a href="#">Каталог</a><a href="#">Инструмент</a><a>Перфораторы</a>

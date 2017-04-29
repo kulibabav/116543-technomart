@@ -41,8 +41,14 @@ h3 {
 
 /*Сетка*/
 
-body {
+.body-index {
   background-image: url("../img/technomart-index.jpg");
+  background-repeat: no-repeat;
+  background-position: center 8px;
+}
+
+.body-category {
+  background-image: url("../img/technomart-catalog.jpg");
   background-repeat: no-repeat;
   background-position: center 8px;
 }
@@ -104,7 +110,7 @@ header, footer, main, div, section, nav, h1, h2, h3, p, article, li, a {
 .header-bottom {
   min-height: 232px;
   padding-top: 46px;
-  margin-bottom: 59px;
+  margin-bottom: 0;
 }
 
 .header-description {
@@ -139,10 +145,14 @@ header, footer, main, div, section, nav, h1, h2, h3, p, article, li, a {
 
 .user-menu a {
   display: inline-block;
-  height: 45px;
+  vertical-align: top;
   padding: 0 20px;
   margin-left: 20px;
   line-height: 45px;
+}
+
+.user-menu-bottom a {
+  line-height: 31px;
 }
 
 .main-menu {
@@ -167,6 +177,10 @@ header, footer, main, div, section, nav, h1, h2, h3, p, article, li, a {
   height: 60px;
   padding: 0 20px;
   line-height: 60px;
+}
+
+.main-index {
+  padding-top: 59px;
 }
 
 .highlights {
