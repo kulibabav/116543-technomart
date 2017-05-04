@@ -2,29 +2,33 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700,700i|PT+Sans:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
-  <body class="body-category">
+  <body>
     <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
-      <div class="container clearfix"> <!--Центрирование-->
-        <a class="header-logo" href="/" title="На главную">
+      <div class="container clearfix">
+        <a class="header-logo" href="index.html">
           <h1>Техномарт</h1>
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
-          <input type="text" name="q" placeholder="Поиск">
-          <input type="submit">
+          <input class="header-search-text" type="text" name="q" placeholder="Поиск:"><div class="header-search-icon"></div>
+          <input class="header-search-button" type="submit">
         </form>
-        <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="header-cart header-cart-full" href="#">Корзина: <span class="cart-count">10</span></a>
-        <!--класс header-cart-full будет задавать красный фон и добавляться, когда cart-count > 0-->
-        <a class="header-order" href="#">Оформить заказ</a>
+        <div class="header-references">
+          <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="header-cart header-cart-full" href="#">Корзина: <span class="cart-count">10</span></a>
+          <a class="header-order" href="#">Оформить заказ</a>
+        </div>
       </div>
     </header>
-    <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
+    <header class="header-main"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
       <div class="container clearfix"> <!--Центрирование-->
-        <h2 class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</h2>
+        <h2 class="header-description">
+          Интернет-магазин строительных материалов
+          <br>и инструментов для ремонта</h2>
         <div class="header-contacts"> <!--Блок контактной информации-->
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -32,17 +36,19 @@
         <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
           <div class="user-menu-top"> <!--Белый фон кнопок-->
             <a class="user-profile" href="#"><span class="user-name">Равшан Джамшутович</span></a>
-            <a class="logout" href="#"></a>
+            <a class="user-logout no-text" href="#"></a>
           </div>
           <div class="user-menu-bottom"> <!--Подменю появляется после входа на сайт-->
-            <a href="#">Мои заказы</a> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
-            <a href="#">Личный кабинет</a>
+            <ul>
+              <li><a href="#">Мои заказы</a></li> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
+              <li><a href="#">Личный кабинет</a></li>
+            </ul>
           </div>
         </div>
       </div>
       <nav class="main-menu container">
         <ul>
-          <li><a href="/">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a>Каталог</a></li>
           <li><a href="#">Новости</a></li>

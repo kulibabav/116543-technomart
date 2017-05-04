@@ -2,35 +2,43 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700,700i|PT+Sans:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
-  <body class="body-index">
+  <body>
     <header class="header-top"> <!--Верхняя узкая плашка с тёмно-синим фоном-->
-      <div class="container clearfix"> <!--Центрирование-->
+      <div class="container clearfix">
         <a class="header-logo">
-          <h1>Техномарт</h1> <!--"Техномарт" это главный заголовок-->
+          <h1>Техномарт</h1>
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
-          <input type="text" name="q" placeholder="Поиск">
-          <input type="submit">
+          <input class="header-search-text" type="text" name="q" placeholder="Поиск:"><div class="header-search-icon"></div>
+          <input class="header-search-button" type="submit">
+          <!--ВОПРОС: как по дефолту повесить на неё нажатие Enter?-->
         </form>
-        <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="header-cart" href="#">Корзина: <span class="cart-count">0</span></a>
-        <a class="header-order" href="#">Оформить заказ</a>
+        <div class="header-references">
+          <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="header-cart" href="#">Корзина: <span class="cart-count">0</span></a>
+          <a class="header-order" href="#">Оформить заказ</a>
+        </div>
       </div>
     </header>
-    <header class="header-bottom"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
+    <header class="header-main"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
       <div class="container clearfix"> <!--Центрирование-->
-        <h2 class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</h2> <!--Решил, что это второстепенный заголовок-->
+        <h2 class="header-description">
+          Интернет-магазин строительных материалов
+          <br/>и инструментов для ремонта</h2> <!--Решил, что это второстепенный заголовок-->
         <div class="header-contacts"> <!--Блок контактной информации-->
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
-          <a class="login" href="#">Войти</a>
-          <a href="#">Регистрация</a>
+          <div class="user-menu-top">
+            <a class="user-login" href="#">Войти</a>
+            <a class="user-register no-icon" href="#">Регистрация</a>
+          </div>
         </div>
       </div>
       <nav class="main-menu container">
@@ -50,15 +58,15 @@
         <section class="highlights clearfix">
           <div class="highlight highlight-materials new">
             <b>Материалы</b>
-            <a href="#">На любой вкус</a>
+            <a class="btn" href="#">На любой вкус</a>
           </div>
           <div class="highlight highlight-equipment">
             <b>Инструмент</b>
-            <a href="#">На все случаи</a>
+            <a class="btn" href="#">На все случаи</a>
           </div>
           <div class="highlight highlight-vehicles">
             <b>Техника</b>
-            <a href="#">Для стройки</a>
+            <a class="btn" href="#">Для стройки</a>
           </div>
           <div class="highlights-slider">
             <input type="radio" name="highlights-toggle" id="highlights-toggle-perforators" checked>
@@ -87,11 +95,11 @@
           </div>
           <div class="highlight highlight-discounts">
             <b>Скидки 50%</b>
-            <a href="#">На 350 товаров</a>
+            <a class="btn" href="#">На 350 товаров</a>
           </div>
           <div class="highlight highlight-delivery">
             <b>Доставка</b>
-            <a href="#">Бесплатно</a>
+            <a class="btn" href="#">Бесплатно</a>
           </div>
         </section>
       </div>
@@ -104,8 +112,8 @@
           <div class="products-catalog clearfix"> <!--4 столбца, 1 строка-->
             <article class="products-catalog-item">
               <div class="product-actions"> <!--При наведении появляется поверх картинки-->
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
+                <a class="btn add-to-cart" href="#">Купить</a>
+                <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="img/product-bosch-bfg-9000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 9000</h4> <!--<br> пока не ставил -->
@@ -114,8 +122,8 @@
             </article>
             <article class="products-catalog-item">
               <div class="product-actions">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
+                <a class="btn add-to-cart" href="#">Купить</a>
+                <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
@@ -124,8 +132,8 @@
             </article>
             <article class="products-catalog-item">
               <div class="product-actions">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
+                <a class="btn add-to-cart" href="#">Купить</a>
+                <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="img/product-bosch-bfg-6000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
@@ -134,8 +142,8 @@
             </article>
             <article class="products-catalog-item new">
               <div class="product-actions">
-                <a class="add-to-cart" href="#">Купить</a>
-                <a class="add-to-bookmarks" href="#">В закладки</a>
+                <a class="btn add-to-cart" href="#">Купить</a>
+                <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
               <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
