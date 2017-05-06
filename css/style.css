@@ -58,6 +58,8 @@ a {
   /*Оформление*/
 }
 
+/*HEADER ОБЩИЙ*/
+
 .header-top {
   /*Расположение*/
   /*Блочная модель*/
@@ -577,6 +579,8 @@ a {
   box-shadow: 0 5px #1d2739;
 }
 
+/*INDEX.HTML*/
+
 .main-index {
   margin-top: 59px;
 }
@@ -769,10 +773,6 @@ a {
   width: 253px;
 }
 
-.products-catalog {
-  margin-bottom: 20px;
-}
-
 .products-catalog-item {
   float: left;
   position: relative;
@@ -782,14 +782,15 @@ a {
   min-height: 298px;
   border: 1px solid #e5e5e5;
   margin-right: 20px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
-.products-catalog-item:nth-child(3) {
+.popular-products .products-catalog-item:nth-child(3) {
   margin-right: 0;
 }
 
-.products-catalog-item:nth-child(4) {
+.popular-products .products-catalog-item:nth-child(4) {
   float: right;
   margin-right: 0;
 }
@@ -1019,12 +1020,24 @@ a {
   vertical-align: middle;
   padding-left: 20px;
   color: white;
-  background-color: #32425c;
+  background: #32425c;
   box-shadow: 0 -1px #293449;
   cursor: pointer;
 }
 
-.services-slider-controls label.active {
+#services-toggle-delivery:checked ~ .services-slider-controls label[for="services-toggle-delivery"] {
+  background: white;
+  color: #32425c;
+  box-shadow: none;
+}
+
+#services-toggle-guaranty:checked ~ .services-slider-controls label[for="services-toggle-guaranty"] {
+  background: white;
+  color: #32425c;
+  box-shadow: none;
+}
+
+#services-toggle-loan:checked ~ .services-slider-controls label[for="services-toggle-loan"] {
   background: white;
   color: #32425c;
   box-shadow: none;
@@ -1060,22 +1073,39 @@ a {
   margin-bottom: 32px;
 }
 
+.services-slide {
+  display: none;
+  min-height: 245px;
+}
+
+.services-slide a {
+  display: inline-block;
+  margin-top: 20px;
+  width: 195px;
+}
+
 .services-slide-delivery {
-  min-height: 241px;
-  background: url(../img/services-slide-delivery.png) no-repeat 100% 20px;
+  background: url(../img/services-slide-delivery.png) no-repeat 100% 24px;
 }
 
 .services-slide-guaranty {
-  min-height: 263px;
-  background: url(../img/services-slide-guaranty.png) no-repeat 100% 20px;
+  background: url(../img/services-slide-guaranty.png) no-repeat 100% 2px;
 }
 
 .services-slide-loan {
-  min-height: 265px;
-  background: url(../img/services-slide-loan.png) no-repeat 100% 20px;
+  background: url(../img/services-slide-loan.png) no-repeat 100% 0;
 }
-.services-slide-guaranty, .services-slide-loan {
-  display: none;
+
+#services-toggle-delivery:checked ~ .services-slides .services-slide-delivery {
+  display: block;
+}
+
+#services-toggle-guaranty:checked ~ .services-slides .services-slide-guaranty {
+  display: block;
+}
+
+#services-toggle-loan:checked ~ .services-slides .services-slide-loan {
+  display: block;
 }
 
 .about-us {
@@ -1131,6 +1161,74 @@ a {
   width: 25px;
   border: 1px solid #fb565a;
 }
+
+/*CATEGORY.HTML*/
+
+.bread-crumbs {
+  line-height: 59px;
+}
+
+.bread-crumbs a {
+  position: relative;
+  vertical-align: middle;
+  color: black;
+  text-transform: uppercase;
+}
+
+.bread-crumbs a:not(:last-child) {
+  margin-right: 35px;
+}
+
+.bread-crumbs a:not(:last-child)::after {
+  content:"";
+  position: absolute;
+  right: -23px;
+  top: 2px;
+  width: 8px;
+  height: 12px;
+  background: url(../img/spritesheet.png) no-repeat -10px -10px;
+}
+
+.category-header {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 30px;
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 30px;
+  line-height: 90px;
+  vertical-align: middle;
+  color: #32425c;
+  text-transform: uppercase;
+  background: #f2f6f8;
+}
+
+.catalog-filter {
+  float: left;
+  width: 220px;
+}
+
+.catalog-sort {
+  float: right;
+  width: 700px;
+  margin-bottom: 20px;
+}
+
+.category .products-catalog {
+  float: right;
+  width: 700px;
+}
+
+.category .products-catalog-item:nth-child(3n + 2) {
+  margin-right: 0;
+}
+
+.category .products-catalog-item:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+}
+
+/*FOOTER ОБЩИЙ*/
 
 .footer-main {
   padding-bottom: 35px;
