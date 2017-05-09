@@ -71,26 +71,22 @@
           <div class="highlights-slider">
             <input type="radio" name="highlights-toggle" id="highlights-toggle-perforators" checked>
             <input type="radio" name="highlights-toggle" id="highlights-toggle-drills">
-            <div class="highlights-slider-controls"> <!--Кружочки переключения слайдов внизу-->
-              <label for="highlights-toggle-perforators"></label>
-              <label for="highlights-toggle-drills"></label>
+            <!--Кружочки переключения слайдов внизу-->
+            <label class="highlights-slider-legend" for="highlights-toggle-perforators"></label>
+            <label class="highlights-slider-legend" for="highlights-toggle-drills"></label>
+            <!--Стрелочки перехода по слайдам-->
+            <label class="highlights-slider-previous"></label>
+            <label class="highlights-slider-next"></label>
+            <!--Слайды-->
+            <div class="highlights-slide highlight-slide-perforators">
+              <b>Перфораторы</b>
+              <p>Настоящие мужские игрушки</p>
+              <a class="btn" href="category.html">Открыть каталог</a>
             </div>
-            <div class="highlights-slider-arrows"> <!--Стрелочки перехода по слайдам-->
-              <label class="highlights-slider-previous" for="highlights-toggle-drills"></label>
-              <label class="highlights-slider-next" for="highlights-toggle-perforators"></label>
-            </div>
-            <!--[ВОПРОС] Подстановка нужных id слайдов (в стрелочки, на случай большего числа слайдов) - программным путем? Тогда нужно стрелкам и слайдеру какие-то id-шники?-->
-            <div class="highlights-slides">
-              <div class="highlights-slide highlight-slide-perforators">
-                <b>Перфораторы</b>
-                <p>Настоящие мужские игрушки</p>
-                <a class="btn" href="category.html">Открыть каталог</a>
-              </div>
-              <div class="highlights-slide highlight-slide-drills">
-                <b>Дрели</b>
-                <p>Соседям на радость!</p>
-                <a class="btn" href="#">Открыть каталог</a>
-              </div>
+            <div class="highlights-slide highlight-slide-drills">
+              <b>Дрели</b>
+              <p>Соседям на радость!</p>
+              <a class="btn" href="#">Открыть каталог</a>
             </div>
           </div>
           <div class="highlight highlight-discounts">
@@ -273,7 +269,7 @@
               Техномарт <!--Также тут не нужен второй заголовок h1-->
           </div>
           <div class="footer-contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <br>+7 (812) 555-05-55
           </div>
         </div>
@@ -323,27 +319,33 @@
     </footer>
     <div class="pop-up cart-plus"> <!--Уведомление о добавлении в корзину-->
       <button class="pop-up-close" name="cart-plus-close"></button> <!--Крестик, закрывающий форму-->
-      <b class="cart-plus-notification">Товар добавлен в корзину!</b>
-      <div class="pop-up-bottom"> <!--Нижняя серая часть-->
+      <div class="pop-up-container">
+        <b class="cart-plus-notification">Товар добавлен в корзину!</b>
+      </div>
+      <div class="pop-up-container pop-up-footer"> <!--Нижняя серая часть-->
         <a class="btn" href="#">Оформить заказ</a>
-        <button class="button-weak" name="cart-plus-continue">Продолжить покупки</button>
+        <button class="btn btn-weak" name="cart-plus-continue">Продолжить покупки</button>
       </div>
     </div>
     <div class="pop-up write-us"> <!--Форма обратной связи-->
       <button class="pop-up-close" name="write-us-close"></button>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-half-width"> <!--Половина ширины слева-->
-          <label for="feedback-name">Ваше имя:</label>
-          <input type="text" name="name" id="feedback-name" placeholder="Представьтесь, пожалуйста">
+        <div class="pop-up-container">
+          <div class="clearfix">
+            <div class="feedback-left-half"> <!--Половина ширины слева-->
+              <label for="feedback-name">Ваше имя:</label>
+              <input class="feedback-input" type="text" name="name" id="feedback-name" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="feedback-right-half"> <!--Половина ширины справа-->
+              <label for="feedback-email">Ваш e-mail:</label>
+              <input class="feedback-input" type="email" name="email" id="feedback-email" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <label for="feedback-text">Текст письма:</label>
+          <textarea class="feedback-input" rows="4" name="text" id="feedback-text" placeholder="В свободной форме"></textarea>
         </div>
-        <div class="form-half-width"> <!--Половина ширины справа-->
-          <label for="feedback-email">Ваш e-mail:</label>
-          <input type="email" name="email" id="feedback-email" placeholder="Для отправки ответа">
-        </div>
-        <label for="feedback-text">Текст письма:</label>
-        <textarea rows="4" name="text" id="feedback-text" placeholder="В свободной форме"></textarea>
-        <div class="pop-up-bottom"> <!--Нижняя серая часть-->
-          <input type="submit" value="Отправить">
+        <div class="pop-up-container pop-up-footer"> <!--Нижняя серая часть-->
+          <input class="btn" type="submit" value="Отправить">
         </div>
       </form>
     </div>

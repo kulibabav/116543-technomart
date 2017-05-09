@@ -60,7 +60,7 @@
     </header>
     <main class="main-category">
       <div class="bread-crumbs container"> <!--Хлебные крошки, предполагаем, что домик отображается всегда псевдо-элементом-->
-        <a class="bread-home" href="index.html"><img src="img/bread-home.png" width="15px" height="12px" alt="ГЛАВНАЯ"></a>
+        <a class="bread-home" href="index.html">Главная</a>
         <a href="#">Каталог</a>
         <a href="#">Инструмент</a>
         <a>Перфораторы</a>
@@ -89,23 +89,23 @@
               <b>Производители:</b>
               <ul>
                 <li>
-                  <input type="checkbox" name="producer-bosch" id="producer-checkbox-bosch" checked>
+                  <input class="filter-checkbox" type="checkbox" name="producer-bosch" id="producer-checkbox-bosch" checked>
                   <label class="checkbox-label" for="producer-checkbox-bosch">Bosch</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="producer-interskol" id="producer-checkbox-interskol">
+                  <input class="filter-checkbox" type="checkbox" name="producer-interskol" id="producer-checkbox-interskol">
                   <label class="checkbox-label" for="producer-checkbox-interskol">Интерскол</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="producer-makita" id="producer-checkbox-makita" checked>
+                  <input class="filter-checkbox" type="checkbox" name="producer-makita" id="producer-checkbox-makita" checked>
                   <label class="checkbox-label" for="producer-checkbox-makita">Makita</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="producer-dewalt" id="producer-checkbox-dewalt">
+                  <input class="filter-checkbox" type="checkbox" name="producer-dewalt" id="producer-checkbox-dewalt">
                   <label class="checkbox-label" for="producer-checkbox-dewalt">Dewalt</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="producer-hitachi" id="producer-checkbox-hitachi">
+                  <input class="filter-checkbox" type="checkbox" name="producer-hitachi" id="producer-checkbox-hitachi">
                   <label class="checkbox-label" for="producer-checkbox-hitachi">Hitachi</label>
                 </li>
               </ul>
@@ -114,11 +114,11 @@
               <b>Питание:</b>
               <ul>
                 <li>
-                  <input type="radio" name="power-type" id="power-type-battery" value="1" checked>
+                  <input class="filter-radio" type="radio" name="power-type" id="power-type-battery" value="1" checked>
                   <label class="radio-label" for="power-type-battery">Аккумуляторные</label>
                 </li>
                 <li>
-                  <input type="radio" name="power-type" id="power-type-plug" value="2">
+                  <input class="filter-radio" type="radio" name="power-type" id="power-type-plug" value="2">
                   <label class="radio-label" for="power-type-plug">Сетевые</label>
                 </li>
               </ul>
@@ -254,7 +254,7 @@
               Техномарт
           </div>
           <div class="footer-contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <br>+7 (812) 555-05-55
           </div>
         </div>
