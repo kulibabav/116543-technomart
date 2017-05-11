@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700,700i|PT+Sans:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
@@ -13,9 +13,11 @@
         <a class="header-logo" href="index.html">
           <h1>Техномарт</h1>
         </a>
-        <form class="header-search" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
-          <input class="header-search-text" type="text" name="q" placeholder="Поиск:"><div class="header-search-icon"></div>
-          <input class="header-search-button" type="submit">
+        <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
+          <input class="header-search-field" type="text" name="q" id="header-search-field" placeholder="Поиск:">
+          <label class="hidden" for="header-search-field">Строка поиска:</label>
+          <div class="header-search-icon"></div>
+          <input class="hidden" type="submit" value="Найти">
         </form>
         <div class="header-references">
           <a class="header-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
@@ -25,46 +27,43 @@
       </div>
     </header>
     <header class="header-main"> <!--Вторая сверху широкая плашка с личным кабинетом, главным меню и светло-голубым фоном-->
-      <div class="container clearfix"> <!--Центрирование-->
+      <div class="container clearfix">
         <h2 class="header-description">
           Интернет-магазин строительных материалов
-          <br>и инструментов для ремонта</h2>
-        <div class="header-contacts"> <!--Блок контактной информации-->
+          и&nbsp;инструментов для ремонта</h2>
+        <div class="header-contacts">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="user-menu"> <!--Блок регистрации/авторизации/личного кабинета-->
-          <div class="user-menu-top"> <!--Белый фон кнопок-->
+        <div class="user-menu">
+          <div class="user-menu-top">
             <a class="user-profile" href="#"><span class="user-name">Равшан Джамшутович</span></a>
             <a class="user-logout no-text" href="#"></a>
           </div>
           <div class="user-menu-bottom"> <!--Подменю появляется после входа на сайт-->
-            <ul>
-              <li><a href="#">Мои заказы</a></li> <!--Разделитель добавим псевдо-элементом для всех кроме первого дочернего пункта-->
-              <li><a href="#">Личный кабинет</a></li>
-            </ul>
+            <a href="#">Мои заказы</a>
+            <a href="#">Личный кабинет</a>
           </div>
         </div>
       </div>
       <nav class="main-menu container">
         <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a>Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="main-menu-item"><a href="index.html">Главная</a></li>
+          <li class="main-menu-item"><a href="#">Компания</a></li>
+          <li class="main-menu-item"><a>Каталог</a></li>
+          <li class="main-menu-item"><a href="#">Новости</a></li>
+          <li class="main-menu-item"><a href="#">Спецпредложения</a></li>
+          <li class="main-menu-item"><a href="#">Доставка</a></li>
+          <li class="main-menu-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
     <main class="main-category">
-      <div class="bread-crumbs container"> <!--Хлебные крошки, предполагаем, что домик отображается всегда псевдо-элементом-->
+      <div class="bread-crumbs container">
         <a class="bread-home" href="index.html">Главная</a>
         <a href="#">Каталог</a>
         <a href="#">Инструмент</a>
         <a>Перфораторы</a>
-        <!--Последняя ссылка без href, чтобы не перезагружать страницу-->
       </div>
       <section class="category-catalog container clearfix">
         <h3 class="category-header">Перфораторы</h3>
@@ -89,36 +88,36 @@
               <b>Производители:</b>
               <ul>
                 <li>
-                  <input class="filter-checkbox" type="checkbox" name="producer-bosch" id="producer-checkbox-bosch" checked>
+                  <input class="filter-checkbox hidden" type="checkbox" name="producer-bosch" id="producer-checkbox-bosch" checked>
                   <label class="checkbox-label" for="producer-checkbox-bosch">Bosch</label>
                 </li>
                 <li>
-                  <input class="filter-checkbox" type="checkbox" name="producer-interskol" id="producer-checkbox-interskol">
+                  <input class="filter-checkbox hidden" type="checkbox" name="producer-interskol" id="producer-checkbox-interskol">
                   <label class="checkbox-label" for="producer-checkbox-interskol">Интерскол</label>
                 </li>
                 <li>
-                  <input class="filter-checkbox" type="checkbox" name="producer-makita" id="producer-checkbox-makita" checked>
+                  <input class="filter-checkbox hidden" type="checkbox" name="producer-makita" id="producer-checkbox-makita" checked>
                   <label class="checkbox-label" for="producer-checkbox-makita">Makita</label>
                 </li>
                 <li>
-                  <input class="filter-checkbox" type="checkbox" name="producer-dewalt" id="producer-checkbox-dewalt">
+                  <input class="filter-checkbox hidden" type="checkbox" name="producer-dewalt" id="producer-checkbox-dewalt">
                   <label class="checkbox-label" for="producer-checkbox-dewalt">Dewalt</label>
                 </li>
                 <li>
-                  <input class="filter-checkbox" type="checkbox" name="producer-hitachi" id="producer-checkbox-hitachi">
+                  <input class="filter-checkbox hidden" type="checkbox" name="producer-hitachi" id="producer-checkbox-hitachi">
                   <label class="checkbox-label" for="producer-checkbox-hitachi">Hitachi</label>
                 </li>
               </ul>
             </div>
             <div class="filter-section">
-              <b>Питание:</b>
+              <b class="condensed">Питание:</b>
               <ul>
                 <li>
-                  <input class="filter-radio" type="radio" name="power-type" id="power-type-battery" value="1" checked>
+                  <input class="filter-radio hidden" type="radio" name="power-type" id="power-type-battery" value="1" checked>
                   <label class="radio-label" for="power-type-battery">Аккумуляторные</label>
                 </li>
                 <li>
-                  <input class="filter-radio" type="radio" name="power-type" id="power-type-plug" value="2">
+                  <input class="filter-radio hidden" type="radio" name="power-type" id="power-type-plug" value="2">
                   <label class="radio-label" for="power-type-plug">Сетевые</label>
                 </li>
               </ul>
@@ -161,7 +160,7 @@
                 <a class="btn add-to-cart" href="#">Купить</a>
                 <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
+              <img class="bfg-2000" src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               <span class="old-price"></span>
               <span class="current-price">12500 Р.</span>
@@ -191,7 +190,7 @@
                 <a class="btn add-to-cart" href="#">Купить</a>
                 <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
+              <img class="bfg-2000" src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               <span class="old-price"></span>
               <span class="current-price">12500 Р.</span>
@@ -221,7 +220,7 @@
                 <a class="btn add-to-cart" href="#">Купить</a>
                 <a class="btn add-to-bookmarks" href="#">В закладки</a>
               </div>
-              <img src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
+              <img class="bfg-2000" src="img/product-bosch-bfg-3000.jpg" width="200" height="150" alt="Фото товара">
               <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               <span class="old-price"></span>
               <span class="current-price">12500 Р.</span>
@@ -232,23 +231,22 @@
             <a href="#">2</a>
             <a href="#">3</a>
             <a class="next" href="#">Следующая</a>
-            <!--[ВОПРОС] Подстановка ссылки на нужную страницу - программным путем? Тогда нужно дать кнопке и paginator-у какие-то id-шники?-->
           </div>
         </div>
       </section>
       <section class="category-about">
-        <div class="container"> <!--Центрирование-->
+        <div class="container">
           <h3 class="section-header">Пара слов о перфораторах</h3>
           <p class="section-content">
-            Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
-            В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;, в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            <span class="condensed-medium">Перфоратор &mdash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</span>
+            <span class="condensed-high">Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+            В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;, в одном устройстве будут совмещены отбойный молоток и ударная дрель.</span>
           </p>
         </div>
       </section>
     </main>
     <footer class="footer-main"> <!--Плашка с нижним меню-->
-      <div class="container clearfix"> <!--Центрирование-->
+      <div class="container clearfix">
         <div class="footer-left"> <!--Часть с логотипом и контактной информацией без ссылок и заголовков-->
           <div class="footer-logo">
               Техномарт
@@ -259,7 +257,7 @@
           </div>
         </div>
         <div class="footer-right"> <!--Часть с двумя менюшками-->
-          <nav class="footer-menu"> <!--Стиль в точности похож на главное меню в хэдере-->
+          <nav class="footer-menu">
             <ul>
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
@@ -269,7 +267,6 @@
             </ul>
           </nav>
           <nav class="footer-menu additional-menu">
-          <!--Класс additional-menu задаёт дополнительное смещение вправо и цвет вложенных ссылок-->
             <ul>
               <li><a href="#">Материалы</a></li>
               <li><a href="#">Техника</a></li>
@@ -281,16 +278,15 @@
       </div>
     </footer>
     <footer class="footer-bottom"> <!--Тёмно-синяя плашка в самом низу страницы-->
-      <div class="container clearfix"> <!--Центрирование-->
+      <div class="container clearfix">
         <div class="copyright">
-          &copy; 2010-2017 Компания "Техномарт"
+          &copy; 2010&ndash;2017 Компания "Техномарт"
           <br>Все права защищены
         </div>
         <div class="social">
           <a class="social-vk" href="#"></a>
           <a class="social-fb" href="#"></a>
           <a class="social-ig" href="#"></a>
-          <!--Общий стиль через .social > a-->
         </div>
         <div class="feedback">
           Обратная связь:
@@ -303,9 +299,9 @@
       </div>
     </footer>
     <div class="pop-up cart-plus"> <!--Уведомление о добавлении в корзину-->
-      <button class="pop-up-close" name="cart-plus-close"></button> <!--Крестик, закрывающий форму-->
+      <button class="pop-up-close" name="cart-plus-close"></button>
       <b class="cart-plus-notification">Товар добавлен в корзину!</b>
-      <div class="pop-up-bottom"> <!--Нижняя серая часть-->
+      <div class="pop-up-bottom">
         <a class="btn" href="#">Оформить заказ</a>
         <button class="button-weak" name="cart-plus-continue">Продолжить покупки</button>
       </div>
