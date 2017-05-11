@@ -891,10 +891,21 @@ a {
   background-position: -159px -10px;
 }
 
-.popular-header {
+.popular-products .popular-header {
   position: relative;
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 28px;
+  padding-top: 31px;
+  padding-bottom: 29px;
+  background-color: #f7f3ec;
+}
+
+.popular-producers .popular-header {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 24px;
+  padding-top: 31px;
+  padding-bottom: 29px;
   background-color: #f7f3ec;
 }
 
@@ -904,7 +915,7 @@ a {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-weight: normal;
   font-size: 30px;
-  line-height: 90px;
+  line-height: 30px;
   vertical-align: middle;
   color: #32425c;
   text-transform: uppercase;
@@ -1117,11 +1128,28 @@ a {
 }
 
 .producers-catalog-item img {
-  vertical-align: middle;
+  display: block;
+  margin-left: 109px;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
 }
 
 .producers-catalog-item:active img {
   opacity: 0.3;
+}
+
+.producer-hitachi img {
+  margin-left: 111px;
+  margin-top: 72px;
+}
+
+.producer-lg img {
+  margin-left: 107px;
+}
+
+.producer-metabo img {
+  margin-left: 111px;
+  margin-top: 67px;
 }
 
 .services {
