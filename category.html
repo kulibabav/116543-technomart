@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
@@ -15,8 +16,8 @@
         </a>
         <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get"> <!--Поиск-->
           <input class="header-search-field" type="text" name="q" id="header-search-field" placeholder="Поиск:">
-          <label class="hidden" for="header-search-field">Строка поиска:</label>
           <div class="header-search-icon"></div>
+          <label class="hidden" for="header-search-field">Строка поиска:</label>
           <input class="hidden" type="submit" value="Найти">
         </form>
         <div class="header-references">
@@ -37,7 +38,7 @@
         </div>
         <div class="user-menu">
           <div class="user-menu-top">
-            <a class="user-profile" href="#"><span class="user-name">Равшан Джамшутович</span></a>
+            <a class="user-profile" href="#"><span class="user-name">Равшан&nbsp;Джамшутович</span></a>
             <a class="user-logout no-text" href="#"></a>
           </div>
           <div class="user-menu-bottom"> <!--Подменю появляется после входа на сайт-->
@@ -78,10 +79,10 @@
                   </div>
                 </div>
               </div>
-              <div class="field-line">
-                <input class="important-field" type="number" name="price-min" value="0">
+              <div class="field-line clearfix">
+                <input class="important-field-left" type="text" name="price-min" value="0">
                 <span>&mdash;</span>
-                <input class="important-field" type="number" name="price-max" value="30000">
+                <input class="important-field-right" type="text" name="price-max" value="30000">
               </div>
             </div>
             <div class="filter-section">
