@@ -49,16 +49,16 @@ var cartplusPopUp = document.querySelector(".pop-up-cart-plus");
 var cartplusCloses = cartplusPopUp.querySelectorAll("button");
 var cartplusOrder = cartplusPopUp.querySelector("a");
 
-for (var cartplusLink of cartplusLinks) {
-  cartplusLink.addEventListener("click", function(event) {
+for (var i=0; i<cartplusLinks.length; i++) {
+  cartplusLinks[i].addEventListener("click", function(event) {
     event.preventDefault();
     cartplusPopUp.classList.add("pop-up-show");
     cartplusOrder.focus();
   });
 };
 
-for (var cartplusClose of cartplusCloses) {
-  cartplusClose.addEventListener("click", function(event) {
+for (var i=0; i<cartplusCloses.length; i++) {
+  cartplusCloses[i].addEventListener("click", function(event) {
     event.preventDefault();
     cartplusPopUp.classList.remove("pop-up-show");
   });
