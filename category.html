@@ -2,9 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
@@ -318,11 +319,14 @@
     </footer>
     <div class="pop-up-cart-plus"> <!--Уведомление о добавлении в корзину-->
       <button class="pop-up-close" name="cart-plus-close"></button>
-      <b class="cart-plus-notification">Товар добавлен в корзину!</b>
-      <div class="pop-up-bottom">
+      <div class="pop-up-container">
+        <b class="cart-plus-notification">Товар добавлен в корзину!</b>
+      </div>
+      <div class="pop-up-container pop-up-footer">
         <a class="btn" href="#">Оформить заказ</a>
-        <button class="button-weak" name="cart-plus-continue">Продолжить покупки</button>
+        <button class="btn btn-weak" name="cart-plus-continue">Продолжить покупки</button>
       </div>
     </div>
+    <script src="js/script-min.js"></script>
   </body>
 </html>

@@ -926,26 +926,23 @@ a {
   width: 233px;
 }
 
+.products-catalog {
+  margin-right: -20px;
+  font-size: 0;
+}
+
 .products-catalog-item {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   position: relative;
   padding: 9px;
+  padding-bottom: 20px;
   width: 200px;
-  height: 298px;
-  min-height: 298px;
+  min-height: 287px;
   border: 1px solid #e5e5e5;
   margin-right: 20px;
   margin-bottom: 20px;
   font-weight: bold;
-}
-
-.popular-products .products-catalog-item:nth-child(4n+3) {
-  margin-right: 0;
-}
-
-.popular-products .products-catalog-item:nth-child(4n) {
-  float: right;
-  margin-right: 0;
 }
 
 .products-catalog-item.new::after {
@@ -965,6 +962,7 @@ a {
 
 .products-catalog-item img {
   display: block;
+  width: 200px;
   height: 150px;
 }
 
@@ -1104,8 +1102,10 @@ a {
   border: 1px solid #e5e5e5;
   line-height: 145px;
   text-align: center;
+  font-size: 0;
   margin-right: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .producers-catalog-item:nth-child(4n+3) {
@@ -1126,28 +1126,51 @@ a {
 }
 
 .producers-catalog-item img {
-  display: block;
-  margin-left: 109px;
-  margin-top: 70px;
-  transform: translate(-50%, -50%);
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 .producers-catalog-item:active img {
   opacity: 0.3;
 }
 
+.producer-bosch img {
+  margin-top: -3px;
+}
+
+.producer-makita img {
+  margin-top: -6px;
+}
+
+.producer-dewalt img {
+  margin-top: -6px;
+}
+
+.producer-interskol img {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+
 .producer-hitachi img {
-  margin-left: 111px;
-  margin-top: 72px;
+  margin-top: 1px;
+  margin-left: 6px;
 }
 
 .producer-lg img {
-  margin-left: 107px;
+  margin-top: -4px;
+  margin-left: -2px;
+}
+
+.producer-aeg img {
+  margin-top: -4px;
+  margin-left: 1px;
 }
 
 .producer-metabo img {
-  margin-left: 111px;
-  margin-top: 67px;
+  margin-left: 4px;
+  margin-top: -10px;
 }
 
 .services {
@@ -1812,15 +1835,6 @@ a {
   border-top-color: black;
 }
 
-.category-catalog .products-catalog-item:nth-child(3n + 2) {
-  margin-right: 0;
-}
-
-.category-catalog .products-catalog-item:nth-child(3n) {
-  float: right;
-  margin-right: 0;
-}
-
 .catalog-paginator {
   margin-top: 32px;
   font-size: 0;
@@ -2154,12 +2168,11 @@ a {
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 940px;
+  height: 446px;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 16px rgba(0,0,0,0.5);
-}
-
-.road-map-big img {
-  display: block;
+  background: skyblue url(../img/road-map-big.png) no-repeat;
 }
 
 .pop-up-cart-plus {
@@ -2215,4 +2228,8 @@ a {
   cursor: pointer;
   font-size: 14px;
   font-family: "Cuprum","Arial Narrow", sans-serif;
+}
+
+.pop-up-show {
+  display: block;
 }
