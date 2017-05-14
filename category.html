@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
@@ -129,22 +129,18 @@
           </form>
         </div>
         <div class="catalog-main">
-          <div class="catalog-sort">
+          <div class="catalog-sort clearfix">
             <span class="sort-header">Сортировка:</span>
-            <div class="sort-parameter sort-price active">
-              <a href="#">По цене</a>
-            </div>
-            <div class="sort-parameter sort-type">
-              <a href="#">По типу</a>
-            </div>
-            <div class="sort-parameter sort-functions">
-              <a href="#">По функционалу</a>
+            <div class="sort-parameters">
+              <a class="sort-price active" href="#">По цене</a>
+              <a class="sort-type" href="#">По типу</a>
+              <a class="sort-functions" href="#">По функционалу</a>
             </div>
             <div class="sort-asc active">
-              <a href="#"></a> <!--Треугольничек вверх, asc = ascending-->
+              <a href="#">По возрастанию</a> <!--Треугольничек вверх, asc = ascending-->
             </div>
             <div class="sort-desc">
-              <a href="#"></a> <!--Треугольничек вниз, desc = descending-->
+              <a href="#">По убыванию</a> <!--Треугольничек вниз, desc = descending-->
             </div>
           </div>
           <div class="products-catalog clearfix"> <!--3 столбца, 3 строки-->

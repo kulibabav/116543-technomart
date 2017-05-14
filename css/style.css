@@ -1746,92 +1746,98 @@ a {
   margin-bottom: 19px;
   padding-left: 19px;
   padding-top: 10px;
-  padding-bottom: 13px;
-  line-height: 15px;
   text-transform: uppercase;
   background: #f7f3ec;
 }
 
-.catalog-sort {
-  min-height: 15px;
+.filter-header {
+  padding-bottom: 13px;
+  line-height: 15px;
 }
 
-.catalog-sort a {
-  display: inline-block;
-  vertical-align: top;
+.catalog-sort {
+  font-size: 0;
+  padding-bottom: 3px;
+  line-height: 25px;
 }
 
 .sort-header {
   float: left;
-  width: 221px;
+  width: 153px;
+  font-size: 13px;
+  line-height: 15px;
 }
 
-.sort-parameter {
+.sort-parameters {
   float: left;
+  width: 458px;
+  padding-right: 11px;
 }
 
-.sort-price {
-  width: 123px;
-}
-
-.sort-type {
-  width: 118px;
-}
-
-.sort-functions {
-  width: 160px;
-}
-
-.sort-parameter a{
+.sort-parameters a {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 15px;
   color: rgba(0, 0, 0, 0.3);
   font-family: "PT Sans","Arial", sans-serif;
   border-bottom: 1px dotted #ee3643;
+  white-space: nowrap;
+  margin-left: 68px;
 }
 
-.sort-parameter.active a {
+.sort-parameters a.active {
   color: #ee3643;
   border: none;
 }
 
-.sort-parameter a:hover {
+.sort-parameters a:hover {
   color: black;
   border-bottom: 1px solid #ee3643;
 }
 
 .sort-asc {
   float: left;
-  margin-top: -1px;
   width: 32px;
 }
 
 .sort-desc {
   float: left;
-  margin-top: 3px;
 }
 
-.sort-asc a {
+.sort-asc a, .sort-desc a {
+  position: relative;
+}
+
+.sort-asc a::after {
+  content:"";
+  position: absolute;
+  bottom: 0;
   border: 5px solid transparent;
   border-bottom: 9px solid rgba(0, 0, 0, 0.3);
 }
 
-.sort-desc a {
+.sort-desc a::after {
+  content:"";
+  position: absolute;
+  bottom: -5px;
   border: 5px solid transparent;
   border-top: 9px solid rgba(0, 0, 0, 0.3);
 }
 
-.sort-asc.active a{
+.sort-asc.active a::after {
   border-bottom-color: #ee3643;
 }
 
-.sort-desc.active a{
+.sort-desc.active a::after {
   border-top-color: #ee3643;
 }
 
-.sort-asc a:hover {
+.sort-asc a:hover::after {
   border-bottom-color: black;
 }
 
-.sort-desc a:hover {
+.sort-desc a:hover::after {
   border-top-color: black;
 }
 
